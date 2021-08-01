@@ -1,11 +1,17 @@
-from django.urls import path, include
+from rest_framework.routers import DefaultRouter
 
-from stockapp.views import *
+from django.urls import path, include
+from stockapp import views as stockviews
+
+from stockapp.views import KospiData, ChartView, KospiViewSet
 
 app_name = "stockapp"
 
-urlpatterns = [
-    path('api/kospi/', KospiAPIView.as_view(), name="kospiview"),
-    path('chart', ChartView.as_view(), name="chart"),
+router = DefaultRouter()
+router.register(r'post/', KospiViewSet)
 
+urlpatterns = [
+    path('api/',include(router.urls)),
+    path('chart/', ChartView.as_view()),
+    path('data/', KospiData),
 ]

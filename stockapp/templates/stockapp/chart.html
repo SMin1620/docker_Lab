@@ -18,7 +18,7 @@
   };
 
   $.ajax({
-    url: "{% url 'stockapp:kospiview' %}",
+    url: "/stockapp/data/",
     dataType: 'json',
     success: function (data) {
 
@@ -55,7 +55,7 @@
 
         yAxis: {
           labels: {
-            format: '{value}p',
+            format: '{value}',
             style: {
               color: 'rgba(0,0,0,.6)',
             },
