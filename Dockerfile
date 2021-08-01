@@ -1,14 +1,6 @@
 FROM python:3.9.0
 
-# RUN apt-get update
-
-# RUN apt-get install -y python3.9
-
-# RUN apt-get install -y git
-
-# RUN apt-get update
-
-# RUN apt-get upgrade -y pip
+RUN apt-get update
 
 RUN echo "testing"
 
