@@ -22,6 +22,8 @@ services:
             - 8000:8000
         volumes: 
             - ${PWD}:/home/Docker_Practice
+        depends_on: 
+            - mariadbtest
     
 networks: 
     docker:

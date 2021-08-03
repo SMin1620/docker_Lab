@@ -370,3 +370,4 @@ fabric.properties
 
 ### Database
 database/
+staticfiles/
