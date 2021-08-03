@@ -92,7 +92,7 @@ DATABASES = {
         'NAME': 'django',
         'USER': 'root',
         'PASSWORD': '1234',
-        'HOST': 'docker_practice_mariadbtest_1',
+        'HOST': 'mariadbtest',
         'PORT': '3306',
     }
 }

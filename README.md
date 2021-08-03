@@ -2,9 +2,13 @@
 Django-MariaDB 프로그램을 Docker를 통해 로컬에서 구동해보는 template/practice codes
 
 > docker compose up -d
+
 > docker ps 
+
 > django와 mariadb 컨테이너가 잘 돌아가는지 확인
+
 > 둘 중 하나가 없다면 수동으로 재시작.
+
 > localhost:8000/stockapp/chart/  로 접속
 
 ## 메인 화면
