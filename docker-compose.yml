@@ -27,6 +27,4 @@ services:
     
 networks: 
     docker:
-
-
         
