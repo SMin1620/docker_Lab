@@ -1,9 +1,7 @@
 from rest_framework.routers import DefaultRouter
 
 from django.urls import path, include
-from stockapp import views as stockviews
-
-from stockapp.views import KospiData, ChartView, KospiViewSet
+from stockapp.views import KospiData, ChartView, KospiViewSet, KospiCreate, KospiDelete
 
 app_name = "stockapp"
 
@@ -12,6 +10,8 @@ router.register(r'post/', KospiViewSet)
 
 urlpatterns = [
     path('api/',include(router.urls)),
-    path('chart/', ChartView.as_view()),
+    path('chart/', ChartView.as_view(), name="chart"),
     path('data/', KospiData),
+    path('create/', KospiCreate, name="create"),
+    path('delete/<int:pk>', KospiDelete, name="delete"),
 ]

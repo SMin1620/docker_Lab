@@ -1,0 +1,16 @@
+{% block content %}
+
+<div style="text-align: center;">
+    <h4>Kospi Create</h4>
+    <form action="{% url 'stockapp:create' %}" method="POST">
+        {% csrf_token %}
+        <input type="date" name="date">
+        <input type="number" step="0.01" name="open">
+        <input type="number" step="0.01" name="close">
+        
+        <input style="color:cornflowerblue; text-decoration:none; cursor: pointer;"\
+               type="submit" value="추가">
+    </form>
+</div>
+
+{% endblock content %}
