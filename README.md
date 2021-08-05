@@ -1,7 +1,8 @@
 # Docker_Practice
 Django-MariaDB 프로그램을 Docker를 통해 로컬에서 구동해보는 template/practice codes
 
-> docker compose up -d
+> [docker compose 설치](https://docs.docker.com/compose/install/)
+> docker-compose up -d
 
 > localhost:8000/stockapp/chart/ 로 접속해서 데이터 추가해보기
 
