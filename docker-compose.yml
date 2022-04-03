@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.9"
 services: 
     mariadbtest:
         image: mariadb:10.5
@@ -15,7 +15,7 @@ services:
     djangotest:
         build: 
             context: .
-            dockerfile: ./localbind.Dockerfile
+            dockerfile: Dockerfile
         networks: 
             - docker
         ports: 
