@@ -1,14 +1,12 @@
 FROM python:3.9.0
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED=1
 
-COPY ./ /home/Docker_Practice/
+COPY ./ /home/django/
 
-WORKDIR /home/Docker_Practice/
+WORKDIR /home/django/
 
 RUN apt-get update
-
+RUN apt-get install -y --no-install-recommends gcc
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
-
-EXPOSE 8000
-
-
-CMD ["bash", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
