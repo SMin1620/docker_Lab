@@ -22,7 +22,7 @@ services:
             - -c
             - |
               python manage.py migrate
-              python manage.py runserver 0.0.0.0:8000
+              gunicorn --bind 0:8000 config.wsgi:application
         networks: 
             - docker
         ports: 
@@ -48,7 +48,6 @@ services:
         depends_on:
             - django
 
-    
 networks: 
     docker:
         
